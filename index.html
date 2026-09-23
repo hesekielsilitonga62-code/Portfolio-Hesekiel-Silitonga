@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hesekiel Silitonga — Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abel&family=Poppins:wght@400;600;700;800&family=Public+Sans:wght@300;400;500;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <style type="text/tailwindcss">
+    @theme {
+      --font-poppins: "Poppins", sans-serif;
+      --font-publicsans: "Public Sans", sans-serif;
+      --font-abel: "Abel", sans-serif;
+      --color-brand-yellow: #f9e902;
+    }
+
+    @layer base {
+      body {
+        @apply overflow-x-hidden bg-black font-publicsans text-white;
+      }
+    }
+
+    @layer components {
+      .navbar {
+        @apply mx-auto flex w-[92%] max-w-5xl items-center justify-between gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2.5 shadow-lg shadow-black/40 backdrop-blur-sm sm:gap-4 sm:px-8 sm:py-4;
+      }
+      .logo {
+        @apply font-publicsans text-sm text-white sm:text-lg md:text-xl;
+      }
+      .navlink {
+        @apply font-publicsans text-[10px] text-white transition-colors hover:text-brand-yellow sm:text-sm md:text-base;
+      }
+
+      .title {
+        @apply bg-gradient-to-r from-white to-brand-yellow bg-clip-text font-poppins font-bold text-transparent text-center text-5xl tracking-wide sm:text-6xl md:text-7xl;
+      }
+
+      .label {
+        @apply font-publicsans text-base text-white/90 sm:text-lg;
+      }
+
+      .subtitle {
+        @apply font-publicsans text-xl font-bold tracking-wide text-white sm:text-2xl;
+      }
+
+      .desc {
+        @apply max-w-md font-publicsans text-sm font-light leading-relaxed tracking-wide text-white/75;
+      }
+
+      .skill-item {
+        @apply flex w-20 flex-col items-center gap-3 text-center sm:w-24;
+      }
+      .skill-icon {
+        @apply h-12 w-auto object-contain sm:h-16;
+      }
+      .skill-label {
+        @apply font-publicsans text-xs tracking-wide text-white sm:text-base;
+      }
+
+      .contact-card {
+        @apply rounded-md border border-white/10 bg-white/10 p-6 shadow-inner backdrop-blur-sm sm:p-10;
+      }
+      .form-label {
+        @apply mb-2 block font-publicsans text-lg font-medium text-white sm:text-xl;
+      }
+      .form-input {
+        @apply w-full rounded-md border-none bg-[#d9d9d9] px-4 py-3 text-sm text-black outline-none focus:ring-2 focus:ring-brand-yellow sm:text-base;
+      }
+      .btn {
+        @apply mt-2 w-fit rounded-md bg-gradient-to-r from-white to-brand-yellow px-8 py-3 font-publicsans font-semibold text-black transition hover:opacity-90;
+      }
+
+      .bg-blob {
+        @apply pointer-events-none absolute inset-x-0 top-0 -z-10 w-full select-none;
+      }
+      .bg-blob1 {
+        @apply pointer-events-none absolute inset-x-0 bottom-0 -z-10 w-full select-none;
+      }
+
+      .section-pad {
+        @apply relative mx-auto max-w-6xl px-6 py-20 sm:px-10 md:py-28;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="fixed inset-x-0 top-4 z-50">
+    <nav class="navbar">
+      <a href="#home" class="logo">PORTOFOLIO</a>
+      <ul class="flex items-center gap-2 sm:gap-6 md:gap-10">
+        <li><a href="#home" class="navlink">Home</a></li>
+        <li><a href="#about" class="navlink">About</a></li>
+        <li><a href="#skills" class="navlink">Skills</a></li>
+        <li><a href="#project" class="navlink">Project</a></li>
+        <li><a href="#contact" class="navlink">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="relative flex min-h-screen scroll-mt-24 flex-col items-center justify-center overflow-hidden px-6 pt-28 text-center sm:pt-32">
+    <img src="Header.png" alt="" class="bg-blob" />
+    <p class="label">welcome to my</p>
+    <h1 class="bg-gradient-to-r from-white to-brand-yellow bg-clip-text font-poppins font-bold text-transparent mt-2 text-7xl tracking-[0.15em] sm:text-8xl md:text-9xl lg:text-[10rem]">Portfolio.</h1>
+  </section>
+
+  <section id="about" class="section-pad grid scroll-mt-24 items-center gap-14 text-center md:grid-cols-3 md:text-left">
+    <div>
+      <h2 class="bg-gradient-to-r from-white to-brand-yellow bg-clip-text font-poppins font-bold text-transparent text-4xl leading-tight tracking-wide sm:text-5xl md:text-6xl">Hello, i'm<br />Hesekiel<br />Silitonga</h2>
+      <p class="font-publicsans text-lg font-medium tracking-wide text-white sm:text-xl mt-4">Undergraduate Computer Science</p>
+    </div>
+
+    <div class="relative mx-auto w-fit">
+      <img
+        src="paspoto 1.png"
+        alt="Foto Hesekiel Silitonga"
+      />
+    </div>
+
+    <p class="max-w-lg font-publicsans text-lg font-light leading-relaxed tracking-wide text-white/85 sm:text-xl mx-auto md:mx-0">
+      Aku Hese mahasiswa Ilmu Komputer Universitas Sumatera Utara yang tertarik menjadi UI/UX Designer dan frontend developer
+    </p>
+  </section>
+
+  <section id="skills" class="section-pad scroll-mt-24 text-center">
+    <p class="font-publicsans text-base font-semibold tracking-[0.3em] text-white sm:text-lg">Skills</p>
+    <h2 class="title mt-2">Ability to Explore</h2>
+
+    <div class="mt-16 space-y-16 text-left">
+      <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+        <div class="md:max-w-xs md:shrink-0">
+          <h3 class="subtitle">Editing and Design</h3>
+          <p class="desc mt-2">Software yang aku gunakan untuk membuat karya grafis</p>
+        </div>
+        <div class="flex flex-wrap gap-8 md:gap-10">
+          <div class="skill-item">
+            <img src="figma-seeklogo.png" alt="Figma" class="skill-icon" />
+            <span class="skill-label">Figma</span>
+          </div>
+          <div class="skill-item">
+            <img
+              src="Ibis.webp"
+              alt="Ibis Paint"
+              class="skill-icon"
+            />
+            <span class="skill-label">Ibis Paint</span>
+          </div>
+          <div class="skill-item">
+            <img src="Affinity.png" alt="Affinity" class="skill-icon" />
+            <span class="skill-label">Affinity</span>
+          </div>
+          <div class="skill-item">
+            <img src="Canva.png" alt="Canva" class="skill-icon" />
+            <span class="skill-label">Canva</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+        <div class="md:max-w-xs md:shrink-0">
+          <h3 class="subtitle">Programming</h3>
+          <p class="desc mt-2">Bahasa pemrograman dan bahasa markup yang saya gunakan untuk mengerjakan suatu permasalahan</p>
+        </div>
+        <div class="flex flex-wrap gap-8 md:gap-10">
+          <div class="skill-item">
+            <img src="Python.png" alt="Python" class="skill-icon" />
+            <span class="skill-label">Python</span>
+          </div>
+          <div class="skill-item">
+            <img src="C++.png" alt="C++" class="skill-icon" />
+            <span class="skill-label">C++</span>
+          </div>
+          <div class="skill-item">
+            <img src="HTML.png" alt="HTML5" class="skill-icon" />
+            <span class="skill-label">HTML5</span>
+          </div>
+          <div class="skill-item">
+            <img src="CSS.png" alt="CSS" class="skill-icon" />
+            <span class="skill-label">CSS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="project" class="section-pad scroll-mt-24">
+    <h2 class="title">Project</h2>
+
+    <div class="mt-16">
+      <h3 class="subtitle">Design Grafis</h3>
+      <div class="mt-6 grid gap-6 sm:grid-cols-3">
+        <img src="Instagram post - 1.png" alt="Poster Price List" class="project-img" />
+        <img src="S.jpg" alt="Poster S.M.O.K.E Case" class="project-img" />
+        <img src="Summar.png" alt="Infografis Summarizing Text" class="project-img" />
+      </div>
+    </div>
+
+    <div class="mt-20">
+      <h3 class="subtitle">Programming</h3>
+      <div class="mt-6 grid gap-6 md:grid-cols-2">
+        <div>
+          <img src="ST.png" alt="Study Tracker" class="project-card" />
+          <p class="desc mt-3">Pembuatan aplikasi pomodoro</p>
+        </div>
+        <div>
+          <img src="PDS.png" alt="PDS" class="project-card" />
+          <p class="desc mt-3">Menggunakan python untuk mengolah data</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section-pad scroll-mt-24">
+    <h2 class="title">Contact</h2>
+
+    <form class="contact-card mx-auto mt-12 max-w-3xl space-y-6">
+      <h3 class="subtitle">Send me an Email!</h3>
+
+      <div>
+        <label for="name" class="form-label">Name</label>
+        <input type="text" id="name" name="name" class="form-input" placeholder="Nama kamu" required />
+      </div>
+
+      <div>
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" name="email" class="form-input" placeholder="Alamat email kamu" required />
+      </div>
+
+      <div>
+        <label for="message" class="form-label">Message</label>
+        <textarea id="message" name="message" rows="4" class="w-full resize-none rounded-md border-none bg-[#d9d9d9] px-4 py-3 text-sm text-black outline-none focus:ring-2 focus:ring-brand-yellow sm:text-base" placeholder="Tulis pesan kamu di sini"></textarea>
+      </div>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <footer class="h-10 overflow-hidden sm:h-40 md:h-40">
+    <img src="Header.png" alt="" class="bg-blob1" />
+    
+    <div class="relative z-10 text-center space-y-2 px-6">
+      <p class="text-white/80 text-sm sm:text-base font-publicsans">
+        Copyright &copy; 2026 Hesekiel Silitonga
+      </p>
+      <p>
+        <a href="https://instagram.com/_hesekiell" target="_blank" rel="noopener noreferrer" class="text-sm text-brand-yellow hover:underline font-publicsans">
+          Instagram:_hesekiell
+        </a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
